@@ -1,11 +1,14 @@
 {
-  "name": "client-logger",
+  "name": "@t0pth4t/client-logger",
   "version": "0.0.2",
   "description": "Client side logger",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://github.com/t0pth4t/client-logger",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t0pth4t/client-logger.git"
+  },
   "license": "MIT",
   "keywords": [],
   "scripts": {
@@ -100,5 +103,10 @@
     "exclude": [
       "**/*.spec.js"
     ]
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/t0pth4t/client-logger/issues"
+  },
+  "homepage": "https://github.com/t0pth4t/client-logger#readme",
+  "author": "t0pth4tdev"
 }
