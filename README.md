@@ -1,3 +1,3 @@
 # client-logger
 
-Client side loger
+Client side logger
