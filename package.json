@@ -1,5 +1,5 @@
 {
-  "name": "@t0pth4t/client-logger",
+  "name": "scrimple-logger",
   "version": "0.0.3",
   "description": "Client side logger",
   "main": "lib/index.js",
