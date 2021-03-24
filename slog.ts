@@ -13,7 +13,10 @@ export class slog {
     console.log(message);
     fetch(slog.origin, {
       method: "POST",
-      headers: { "x-scrimple-api-key": this.apiKey },
+      headers: {
+        "x-scrimple-api-key": this.apiKey,
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({ message }),
     });
   }
@@ -22,7 +25,10 @@ export class slog {
     console.info(message);
     fetch(slog.origin, {
       method: "POST",
-      headers: { "x-scrimple-api-key": this.apiKey },
+      headers: {
+        "x-scrimple-api-key": this.apiKey,
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({ message }),
     });
   }
@@ -30,7 +36,10 @@ export class slog {
     console.error(message, error);
     fetch(slog.origin, {
       method: "POST",
-      headers: { "x-scrimple-api-key": this.apiKey },
+      headers: {
+        "x-scrimple-api-key": this.apiKey,
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({ message, error }),
     });
   }
@@ -39,7 +48,10 @@ export class slog {
     console.warn(message);
     fetch(slog.origin, {
       method: "POST",
-      headers: { "x-scrimple-api-key": this.apiKey },
+      headers: {
+        "x-scrimple-api-key": this.apiKey,
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({ message }),
     });
   }
