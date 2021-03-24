@@ -1,10 +1,44 @@
+import * as fetch from "isomorphic-fetch";
 export class slog {
   private readonly apiKey: string;
-  constructor(apiKey:string) {
+  private static origin = "https://scrimple-backend.herokuapp.com";
+  constructor(apiKey: string) {
+    if (!apiKey) {
+      throw new Error("API Key must have a value!");
+    }
     this.apiKey = apiKey;
   }
+
+  log(message: string) {
+    console.log(message);
+    fetch(slog.origin, {
+      method: "POST",
+      headers: { "x-scrimple-api-key": this.apiKey },
+      body: JSON.stringify({ message }),
+    });
+  }
+
   info(message: string) {
-    fetch("https://scrimple-backend.herokuapp.com", {
+    console.info(message);
+    fetch(slog.origin, {
+      method: "POST",
+      headers: { "x-scrimple-api-key": this.apiKey },
+      body: JSON.stringify({ message }),
+    });
+  }
+  error(message: string, error?: Error) {
+    console.error(message, error);
+    fetch(slog.origin, {
+      method: "POST",
+      headers: { "x-scrimple-api-key": this.apiKey },
+      body: JSON.stringify({ message, error }),
+    });
+  }
+
+  warn(message: string) {
+    console.warn(message);
+    fetch(slog.origin, {
+      method: "POST",
       headers: { "x-scrimple-api-key": this.apiKey },
       body: JSON.stringify({ message }),
     });
