@@ -1,6 +1,6 @@
 {
   "name": "scrimple-logger",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Client side logger",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
