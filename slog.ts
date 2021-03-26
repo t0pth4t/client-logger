@@ -1,7 +1,7 @@
 import * as fetch from "isomorphic-fetch";
 export class slog {
   private readonly apiKey: string;
-  private static origin = "https://scrimple-backend.herokuapp.com";
+  private static origin = "https://scrimple-backend.herokuapp.com/v1/logs";
   constructor(apiKey: string) {
     if (!apiKey) {
       throw new Error("API Key must have a value!");
