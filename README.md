@@ -25,3 +25,13 @@ Use the API key when initializing the logger. All the logs will be available at 
     logger.error("My first error log.", err)
   }
 ```
+
+## Options
+
+***disableConsoleLogs***
+
+Type: *boolean*
+
+Default: *false*
+
+Prevents log/warn/error/etc... statements from execution equivalent console command.
