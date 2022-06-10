@@ -1,17 +1,17 @@
 {
-  "target": "ES2015",
-  "module": "commonjs",
-  "strict": true,
-  "esModuleInterop": true,
-  "skipLibCheck": true,
-  "forceConsistentCasingInFileNames": true,
-  "alwaysStrict": true,
-  "exclude": ["node_modules/**"],
-  "lib": ["DOM"],
-  "typeRoots": ["node_modules/@types"],
+  "exclude": ["node_modules/**", "lib/**", "test/**", "**/*.spec.ts"],
   "compilerOptions": {
     "outDir": "lib",
     "declaration": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "target": "ES2015",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": false,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "alwaysStrict": true,
+    "lib": ["DOM", "ESNext"],
+    "typeRoots": ["node_modules/@types"]
   }
 }
